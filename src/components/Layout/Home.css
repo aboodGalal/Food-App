@@ -1,0 +1,10 @@
+.img::after{
+    content: "";
+    position: absolute;
+    bottom: -45%;
+    right: -10%;
+    width: 95%;
+    height: 50%;
+    transform: rotate(-7deg);
+    background-color: #1f2937;
+}
