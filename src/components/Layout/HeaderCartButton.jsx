@@ -1,6 +1,7 @@
 import React, { Fragment, useContext, useEffect, useState } from 'react'
 import CartContext from '../../store/CartContext'
 import './HeaderCartButton.css'
+// import shopIcon from '../../../public/fonts/icomoon.svg'
 
 
 function HeaderCartButton(props) {
@@ -27,13 +28,12 @@ function HeaderCartButton(props) {
   }, [items])
   return (
     <Fragment>
-        <button onClick={() => props.toggleCartShown()} className={`bg-[#4d1601] ${highlightedCart? 'bump' : ''} 
-        cursor-pointer border-0 px-3 py-1 flex justify-around
-        items-center text-bold text-inherit rounded-[25px] hover:bg-[#2c0d00] active:bg-[#2c0d00]
-         gap-2`}>
-            <span>icn</span>
+        <button onClick={() => props.toggleCartShown()} className={`bg-[#4d1601] 
+        ${highlightedCart? 'bump' : ''} cursor-pointer border-0 px-6 py-1 flex justify-around items-center 
+        text-bold text-inherit rounded-[25px] hover:bg-[#2c0d00] active:bg-[#2c0d00] gap-2`}>
+            <span className={`icon-cart w-4 h-4 relative`}></span>
             <span>Your cart</span>
-            <span className={`text-white px-3 py-1 rounded-xl bg-[#b94517]`}>{itemsNumbersOfCart}</span>
+            <span className={`text-white px-4 py-1 rounded-2xl bg-[#b94517]`}>{itemsNumbersOfCart}</span>
         </button>
     </Fragment>
   )
