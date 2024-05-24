@@ -8,7 +8,8 @@ const BackDrop = () => {
 
 const ModalOverlay = (props) =>{
     return (
-        <div className={`fixed w-[55%] h-fit left-1/2 -translate-x-1/2 top-1/4 z-50`}>
+        <div className={`fixed w-[55%] h-[70%] overflow-hidden max-h-[75%] overflow-y-auto rounded-lg
+          left-1/2 -translate-x-1/2 top-1/4 z-50`}>
             <div className={`px-5 py-3 rounded-lg bg-white flex flex-col gap-3 up
             justify-center items-center`}>{props.children}</div>
         </div>
